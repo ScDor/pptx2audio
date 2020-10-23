@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# Extracts audio from pptx files saved in the same folder.
+# all audio files in foo.pptx will be extracted into a new folder named foo.
+
 import os
 import zipfile
 from pathlib import Path
@@ -12,9 +16,11 @@ def extract_audio(in_path: Path, audio_extensions: list = None) -> None:
 
     audio_extensions = [f".{ext}" for ext in audio_extensions]
 
+    count = 0
+
     zip_paths = [file for file in Path(in_path).iterdir()
                  if Path(file).suffix == PPTX_EXTENSION]
-    count = 0
+
     for zip_path in zip_paths:
         with zipfile.ZipFile(zip_path) as zip_file:
             audio_files = [f for f in zip_file.filelist
