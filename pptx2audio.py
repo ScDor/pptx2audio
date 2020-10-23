@@ -16,12 +16,13 @@ def extract_audio(in_path: Path, audio_extensions: list = None) -> None:
 
     audio_extensions = [f".{ext}" for ext in audio_extensions]
 
-    count = 0
+    audio_count = 0
 
     zip_paths = [file for file in Path(in_path).iterdir()
                  if Path(file).suffix == PPTX_EXTENSION]
 
     for zip_path in zip_paths:
+        print("searching audio files in", zip_path.name)
         with zipfile.ZipFile(zip_path) as zip_file:
             audio_files = [f for f in zip_file.filelist
                            if Path(f.filename).suffix in audio_extensions]
@@ -34,11 +35,11 @@ def extract_audio(in_path: Path, audio_extensions: list = None) -> None:
                 audio_file.filename = os.path.basename(audio_file.filename)
 
                 zip_file.extract(audio_file, path=dest_folder)
-                print("extracting ", dest_folder, audio_file.filename)
-                count += 1
+                print("\t", "extracting ", dest_folder, audio_file.filename)
+                audio_count += 1
     print()
     print("created by ScDor, October 2020\t\tsource: github.com/ScDor/pptx2audio")
-    print(f"done extracting {count} audio files\t\tpress enter to close")
+    print(f"done extracting {audio_count} audio files\t\tpress enter to close")
     input()
 
 
