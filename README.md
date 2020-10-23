@@ -1,8 +1,11 @@
 # pptx2audio
-Extracts m4a from pptx files
+Extracts audio files from pptx presentations.
 
 ## Usage
-download pptx2audio.py, put it in some folder with the pptx file(s), and run it.
+If you have python installed, use [pptx2audio.py](https://github.com/ScDor/pptx2audio/blob/master/pptx2audio.py).
+Otherwise, download [pptx2audio.exe](https://github.com/ScDor/pptx2audio/releases/latest/download/pptx2audio.exe).
+
+Save pptx2audio in a folder where your pptx files are, and run it.
     
     .
     ├── ...
