@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # Extracts audio from pptx files saved in the same folder.
 # all audio files in foo.pptx will be extracted into a new folder named foo.
+__version__ = 1.0
 
 import os
 import zipfile
