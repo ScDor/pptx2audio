@@ -9,26 +9,29 @@ Save pptx2audio in a folder where your pptx files are, and run it.
     
     .
     ├── ...
-    ├── presentations           # working directory
+    ├── presentations           # folder
     │   ├── foo.pptx            # some pptx file, preferably including audio files
-    │   ├── bar.pptx            # another pptx file
-    │   └── pptx2audio.py       
+    │   ├── bar.pptx            
+    │   └── pptx2audio.py       # or pptx2audio.exe
     └── ...
     
     
-   After running the script, you'll have
+   After running the script, the folder will look like this:
    
     .
     ├── ...
-    ├── presentations           # working directory
-    │   ├── foo.pptx            # some pptx file, preferably including audio files
-    │   ├── bar.pptx            
-    |   ├── foo                 # a folder
-    │   |   ├── audio1.m4a      # some audio file from that foo.pptx
+    ├── presentations           
+    │   ├── foo.pptx            
+    │   ├── foo.pptx            
+    │   ├── pptx2audio.py        
+    │   | 
+    |   ├── foo                 # a newly-created folder
+    │   |   ├── audio1.m4a      # some audio file from foo.pptx
     │   |   ├── audio2.m4a      
-    │   |   └── ...
-    │   └── bar
-    │       ├── audio1.m4a
+    │   |   └── ...             
+    │   | 
+    │   └── bar                 # a separate folder for each pptx file
+    │       ├── audio1.m4a      
     │       └── ...
     |   
     └── ...
