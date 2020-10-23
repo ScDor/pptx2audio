@@ -3,7 +3,8 @@ Extracts audio files from pptx presentations.
 
 ## Usage
 If you have python installed, use [pptx2audio.py](https://github.com/ScDor/pptx2audio/blob/master/pptx2audio.py).
-Otherwise, download [pptx2audio.exe](https://github.com/ScDor/pptx2audio/releases/latest/download/pptx2audio.exe).
+
+If you don't (or don't know what Python is), download [this file](https://github.com/ScDor/pptx2audio/releases/latest/download/pptx2audio.exe).
 
 Save pptx2audio in a folder where your pptx files are, and run it.
     
